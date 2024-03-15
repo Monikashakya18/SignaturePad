@@ -49,5 +49,8 @@ const saveAsImg=(e)=>{
 canvas.addEventListener('mousedown', startdrawing);
 canvas.addEventListener('mousemove', drawing);
 canvas.addEventListener('mouseup', () => Isdrawing = false);
+canvas.addEventListener('touchstart', startdrawing);
+canvas.addEventListener('touchmove', drawing);
+canvas.addEventListener('touchend', () => Isdrawing = false);
 clearbtn.addEventListener('click',clearcanvas);
 save.addEventListener('click',saveAsImg);
