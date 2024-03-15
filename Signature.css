@@ -1,0 +1,40 @@
+body {
+    height: auto;
+    width: auto;
+    background-color: rgb(234, 215, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  canvas {  
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 1px solid black; 
+  }
+  .canvas-wrap{
+    text-align: center;
+  }
+  h1{
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 50px;
+    font-style:serif;
+  }
+  #buttons{
+   margin-top: 1rem ;
+   margin-bottom: 2rem ;
+   padding-right: 19.60rem;
+  }
+  #Signaturepad{
+    margin-top:1.70rem ;
+    width: 40rem;
+    height: auto;
+    background-color: antiquewhite;
+    box-shadow:2px 2px 20px rgb(126, 126, 117) ;
+    border-radius: 10px;
+  }
+  canvas:hover{
+    cursor:pointer;
+  }
+  
+  
