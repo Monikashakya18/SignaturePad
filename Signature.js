@@ -18,6 +18,7 @@ window.addEventListener('load',()=>{
 });
 
 const drawing = (e) => {
+  e.preventDefault();
   if (Isdrawing == false){
     return false;
   }
