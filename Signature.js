@@ -5,6 +5,18 @@ let save=document.getElementById('download');
 let Isdrawing = false;
 let brushcolor='black';
 
+ const getposition=(evalue)=>{
+  let x, y;
+  if (evalue.touches) {
+    x = evalue.touches[0].clientX - canvas.getBoundingClientRect().left;
+    y = evalue.touches[0].clientY - canvas.getBoundingClientRect().top;
+  } else {
+    x = evalue.offsetX;
+    y = evalue.offsetY;
+  }
+  return { x, y };
+ }
+
 const setbgcolor=()=>{
   ctx.fillStyle='white';
   ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -23,7 +35,8 @@ const drawing = (e) => {
     return false;
   }
   else {
-    ctx.lineTo(e.offsetX, e.offsetY);
+    const position=getposition(e);
+    ctx.lineTo(position.x, position.y);//
     ctx.lineWidth = 2;
     ctx.lineCap="round";
     ctx.stroke();
